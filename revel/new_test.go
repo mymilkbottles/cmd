@@ -1,11 +1,12 @@
 package main_test
 
 import (
-	"github.com/revel/cmd/model"
-	"github.com/revel/cmd/revel"
-	"github.com/stretchr/testify/assert"
 	"os"
 	"testing"
+
+	"github.com/mymilkbottles/cmd/model"
+	main "github.com/revel/cmd/revel"
+	"github.com/stretchr/testify/assert"
 )
 
 // test the commands
@@ -52,4 +53,3 @@ func TestNew(t *testing.T) {
 		}
 	}
 }
-

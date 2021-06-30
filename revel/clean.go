@@ -6,8 +6,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/revel/cmd/model"
-	"github.com/revel/cmd/utils"
+
+	"github.com/mymilkbottles/cmd/model"
+	"github.com/mymilkbottles/cmd/utils"
 
 	"os"
 	"path/filepath"

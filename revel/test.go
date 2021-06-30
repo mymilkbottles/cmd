@@ -15,10 +15,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/revel/cmd/harness"
-	"github.com/revel/cmd/model"
-	"github.com/revel/cmd/tests"
-	"github.com/revel/cmd/utils"
+	"github.com/mymilkbottles/cmd/harness"
+	"github.com/mymilkbottles/cmd/model"
+	"github.com/mymilkbottles/cmd/tests"
+	"github.com/mymilkbottles/cmd/utils"
 )
 
 var cmdTest = &Command{
@@ -99,7 +99,7 @@ func testApp(c *model.CommandConfig) (err error) {
 	}
 
 	// Direct all the output into a file in the test-results directory.
-	file, err := os.OpenFile(filepath.Join(resultPath, "app.log"), os.O_CREATE | os.O_WRONLY | os.O_APPEND, 0666)
+	file, err := os.OpenFile(filepath.Join(resultPath, "app.log"), os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
 	if err != nil {
 		return utils.NewBuildError("Failed to create test result log file: ", "error", err)
 	}
@@ -234,7 +234,7 @@ func filterTestSuites(suites *[]tests.TestSuiteDesc, suiteArgument string) *[]te
 // in case it hasn't finished starting up yet.
 func getTestsList(baseURL string) (*[]tests.TestSuiteDesc, error) {
 	var (
-		err error
+		err        error
 		resp       *http.Response
 		testSuites []tests.TestSuiteDesc
 	)
